@@ -34,8 +34,19 @@ namespace Dictionary.Net5._0
                 employeeDirectory.Add(emp.Role, emp);
             }
 
-            Employee empl = employeeDirectory["CEO"];
-            Console.WriteLine("Employee Name: {0}, Role: {1}, Salary:{2}", empl.Name, empl.Role, empl.Salary);
+            string key = "CEO";
+            if(employeeDirectory.ContainsKey(key))
+            {
+                Employee empl = employeeDirectory["CEO"];
+                Console.WriteLine("Employee Name: {0}, Role: {1}, Salary:{2}", empl.Name, empl.Role, empl.Salary);
+            }
+            else
+            {
+                Console.WriteLine("This key does not exist {0}", key);
+            }
+
+
+            
         }
     }
 
