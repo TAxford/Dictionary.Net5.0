@@ -21,12 +21,18 @@ namespace Dictionary.Net5._0
                 new Employee("Intern", "Ernest", 22, 8),
             };
 
-            Dictionary<int, string> myDictionary = new Dictionary<int, string>()
+            /*Dictionary<int, string> myDictionary = new Dictionary<int, string>()
             {
                 { 1, "one" },
                 { 2, "two" },
                 { 3, "three" }
-            };
+            };*/
+
+            Dictionary<string, Employee> employeeDirectory= new Dictionary<string, Employee>();
+            foreach (Employee emp in employees)
+            {
+                employeeDirectory.Add(emp.Role, emp);
+            }
 
 
 
