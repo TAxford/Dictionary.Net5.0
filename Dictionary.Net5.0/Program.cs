@@ -34,11 +34,8 @@ namespace Dictionary.Net5._0
                 employeeDirectory.Add(emp.Role, emp);
             }
 
-
-
-
-
-            Console.WriteLine("Hello World!");
+            Employee empl = employeeDirectory["CEO"];
+            Console.WriteLine("Employee Name: {0}, Role: {1}, Salary:{2}", empl.Name, empl.Role, empl.Salary);
         }
     }
 
