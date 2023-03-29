@@ -11,6 +11,16 @@ namespace Dictionary.Net5._0
 
         static void Main(string[] args)
         {
+            Employee[] employees =
+            {
+                new Employee("CEO", "Gwen", 95, 200),
+                new Employee("Manager", "Joe", 35, 25),
+                new Employee("HR", "Lora", 32, 31),
+                new Employee("Secretary", "Petra", 28, 18),
+                new Employee("Lead Developer", "Artorias", 55, 35),
+                new Employee("Intern", "Ernest", 22, 8),
+            };
+
             Dictionary<int, string> myDictionary = new Dictionary<int, string>()
             {
                 { 1, "one" },
@@ -44,12 +54,12 @@ namespace Dictionary.Net5._0
             }
         }
         //simple constructor
-        public Employee(string role, string name, int age)
+        public Employee(string role, string name, int age, float rate)
         {
             this.Role = role;
             this.Name = name;
             this.Age = age;
-            this.Rate = Rate;
+            this.Rate = rate;
         }
     }
 
